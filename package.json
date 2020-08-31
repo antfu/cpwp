@@ -1,26 +1,28 @@
 {
-  "name": "@vitesse/template",
+  "name": "cpwp",
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "prepare": "esno scripts/prepare.ts",
     "dev": "vite --port 3333 --open",
     "build": "cross-env NODE_ENV=production vite build"
   },
   "dependencies": {
     "@iconify/iconify": "^2.0.0-beta.6",
     "@vueuse/core": "^4.0.0-beta.9",
-    "vue": "^3.0.0-rc.8",
-    "vue-i18n": "9.0.0-alpha.13",
-    "vue-router": "^4.0.0-beta.7"
+    "vue": "^3.0.0-rc.8"
   },
   "devDependencies": {
     "@antfu/eslint-config-vue": "^0.3.3",
     "@iconify/json": "^1.1.211",
     "@purge-icons/generated": "^0.4.0",
+    "@types/fs-extra": "^9.0.1",
     "@typescript-eslint/eslint-plugin": "^3.10.1",
     "@vue/compiler-sfc": "^3.0.0-rc.8",
     "cross-env": "^7.0.2",
     "eslint": "^7.7.0",
+    "esno": "^0.2.0",
+    "fs-extra": "^9.0.1",
     "pnpm": "^5.5.3",
     "tailwindcss": "^1.7.3",
     "tailwindcss-dark-mode": "^1.1.6",
@@ -28,7 +30,6 @@
     "vite": "^1.0.0-rc.4",
     "vite-plugin-components": "^0.2.10",
     "vite-plugin-purge-icons": "^0.4.0",
-    "vite-plugin-voie": "^0.3.1",
     "voie-pages": "^0.3.0"
   },
   "eslintConfig": {
