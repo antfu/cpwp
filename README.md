@@ -11,7 +11,7 @@
 
 <p align='center'>
 <samp>
-  <a href='https://cpwp.netlify.app/'>&nbsp;&nbsp;&nbsp;Go to App</a>
+  &nbsp;&nbsp;&nbsp;<a href='https://cpwp.netlify.app/'>Go to App</a>
 |
   <a href='https://github.com/shimohq/chinese-programmer-wrong-pronunciation'>Original Repo</a>
 </samp>
