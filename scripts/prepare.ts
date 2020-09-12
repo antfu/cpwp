@@ -11,8 +11,8 @@ async function prepare() {
 
   const md = await fs.readFile('source/README.md', 'utf-8')
 
-  const REGEX = /\((.*?)\)\s*\[(.*?)\]/
-  const REGEX_WRONG = /\[(.*?)\]/
+  const REGEX = /\((.*?)\)\s*\/(.*?)\//
+  const REGEX_WRONG = /\/(.*?)\//
 
   const records = md.split('\n')
     .filter(i => i.startsWith('|'))

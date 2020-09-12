@@ -24,23 +24,26 @@
           </thead>
           <tbody>
             <tr v-for="item in data" :key="item.word">
-              <td class="px-2 py-1.5 rounded text-right pr-4">
+              <td
+                class="px-2 py-1.5 rounded text-right pr-4 hover:bg-gray-400 hover:bg-opacity-10"
+                @click="practice(item)"
+              >
                 {{ item.word }}
               </td>
               <td
                 class="px-2 py-1.5 text-sm rounded text-center opacity-75 hover:bg-gray-500 hover:bg-opacity-10"
                 @click="play(item, 'uk')"
               >
-                [{{ item.phonetic_uk }}]
+                /{{ item.phonetic_uk }}/
               </td>
               <td
                 class="px-2 py-1.5 text-sm rounded text-center opacity-75 hover:bg-gray-500 hover:bg-opacity-10"
                 @click="play(item, 'us')"
               >
-                [{{ item.phonetic_us }}]
+                /{{ item.phonetic_us }}/
               </td>
               <td class="px-2 py-1.5 text-sm rounded text-center text-red-600 dark:text-red-400 opacity-50 hidden lg:block">
-                [{{ item.phonetic_wrong }}]
+                /{{ item.phonetic_wrong }}/
               </td>
             </tr>
           </tbody>
@@ -89,6 +92,10 @@ export const play = (item: any, r: string) => {
     }, 1000)
   })
   audio.play()
+}
+
+export const practice = (item: any) => {
+  window.open(`https://www.google.com/search?q=how+to+pronounce+${item.word.replace(/\s/g, '+')}`, '_blank')
 }
 </script>
 
