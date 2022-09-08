@@ -81,16 +81,19 @@ export const title = Array.from('Chinese Programmer Wrong Pronunciation').map(i 
 
 export const play = (item: any, r: string) => {
   const audio = new Audio(item[`voice_${r}`])
-  audio.addEventListener('playing', () => {
+
+  audio.addEventListener('loadeddata', () => {
     word.value = item.word
     region.value = r
     phonetic.value = item[`phonetic_${r}`]
 
     modal.value = true
-    setTimeout(() => {
-      modal.value = false
-    }, 1000)
   })
+
+  audio.addEventListener('ended', () => {
+    modal.value = false
+  })
+
   audio.play()
 }
 
